@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function CartItem() {
   return (
-    <div>CartItem</div>
+    <div>There is new CartItem</div>
   )
 }
