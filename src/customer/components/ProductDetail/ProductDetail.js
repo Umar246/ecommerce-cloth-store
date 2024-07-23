@@ -228,8 +228,8 @@ export default function ProductDetail() {
                 <Button
                   variant="contained"
                   sx={{
-                    px: "1.5rem",
-                    py: "0.8rem",
+                    px: "1.2rem",
+                    py: "0.5rem",
                     bgcolor: "#9155fd",
                     mt: "2rem",
                   }}
@@ -280,19 +280,19 @@ export default function ProductDetail() {
 
         {/* //TODO: Rating & Reviews */}
         <section>
-          <h1 className="font-semibold text-lg pb-4">Recent Review & Rating</h1>
+          <h1 className="font-semibold text-lg pb-4 ml-5 lg:ml-0">Recent Review & Rating</h1>
 
-          <div className="border p-5">
+          <div className="border p-2 md:p-5 ml-5 md:ml-0">
             <Grid container spacing={7}>
-              <Grid item xs={7}>
-                <div className="space-y-5">
+              <Grid item xs={12} sm={7} >
+                <div className="space-y-5 ">
                   {[1, 1, 1].map((item) => (
                     <ProductReviewCard />
                   ))}
                 </div>
               </Grid>
 
-              <Grid item xs={5}>
+              <Grid item xs={12} sm={5}>
                 <h1 className="text-xl font-semibold pb-1">Product Ratings</h1>
 
                 <div className="flex items-center space-x-2">
@@ -378,7 +378,7 @@ export default function ProductDetail() {
 
         {/* //TODO: Similar Products */}
         <section>
-          <h1 className="py-5 font-bold text-xl">Similar Products</h1>
+          <h1 className="py-5 font-bold text-xl ml-5 lg:ml-0">Similar Products</h1>
 
           <div className="flex flex-wrap space-y-8 ">
             {mens_kurta.slice(0, 12).map((item)=> <HomeSectionCard  product={item}/>)}

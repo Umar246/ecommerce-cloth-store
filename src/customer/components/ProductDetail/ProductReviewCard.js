@@ -5,7 +5,7 @@ export default function ProductReviewCard() {
   return (
     <div>
       <Grid container spacing={2} gap={3}>
-        <Grid item sx={1}>
+        <Grid item sx={4}>
           <Box>
             <Avatar
               className="text-white"
@@ -16,7 +16,7 @@ export default function ProductReviewCard() {
           </Box>
         </Grid>
 
-        <Grid item xs={9}>
+        <Grid item xs={8}>
           <div>
             <div className="space-y-2">
               <p className="font-semibold text-lg">Raam</p>
