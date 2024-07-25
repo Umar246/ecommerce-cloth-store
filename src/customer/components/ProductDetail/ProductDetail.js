@@ -5,6 +5,7 @@ import { Box, Button, Grid, LinearProgress, Rating } from "@mui/material";
 import ProductReviewCard from "./ProductReviewCard";
 import { mens_kurta } from "../../../Data/Men/mens_kurta";
 import HomeSectionCard from "../HomeSectionCard/HomeSectionCard";
+import { useNavigate } from "react-router-dom";
 
 const product = {
   name: "Basic Tee 6-Pack",
@@ -63,6 +64,11 @@ function classNames(...classes) {
 export default function ProductDetail() {
   const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [selectedSize, setSelectedSize] = useState(product.sizes[2]);
+  const navigate = useNavigate();
+
+  const handleAddToCart = () => {
+    navigate("/cart");
+};
 
   return (
     <div className="bg-white lg:px-20">
@@ -226,6 +232,7 @@ export default function ProductDetail() {
                 </div>
 
                 <Button
+                  onClick={handleAddToCart}
                   variant="contained"
                   sx={{
                     px: "1.2rem",
@@ -280,11 +287,13 @@ export default function ProductDetail() {
 
         {/* //TODO: Rating & Reviews */}
         <section>
-          <h1 className="font-semibold text-lg pb-4 ml-5 lg:ml-0">Recent Review & Rating</h1>
+          <h1 className="font-semibold text-lg pb-4 ml-5 lg:ml-0">
+            Recent Review & Rating
+          </h1>
 
           <div className="border p-2 md:p-5 ml-5 md:ml-0">
             <Grid container spacing={7}>
-              <Grid item xs={12} sm={7} >
+              <Grid item xs={12} sm={7}>
                 <div className="space-y-5 ">
                   {[1, 1, 1].map((item) => (
                     <ProductReviewCard />
@@ -378,13 +387,16 @@ export default function ProductDetail() {
 
         {/* //TODO: Similar Products */}
         <section>
-          <h1 className="py-5 font-bold text-xl ml-5 lg:ml-0">Similar Products</h1>
+          <h1 className="py-5 font-bold text-xl ml-5 lg:ml-0">
+            Similar Products
+          </h1>
 
           <div className="flex flex-wrap space-y-8 ">
-            {mens_kurta.slice(0, 12).map((item)=> <HomeSectionCard  product={item}/>)}
+            {mens_kurta.slice(0, 12).map((item) => (
+              <HomeSectionCard product={item} />
+            ))}
           </div>
         </section>
-
       </div>
     </div>
   );

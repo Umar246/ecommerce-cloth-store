@@ -24,7 +24,8 @@ import { navigationData } from "./NavigationData";
 import { Avatar, ButtonBase, Menu } from "@mui/material";
 import { deepPurple } from "@mui/material/colors";
 import MenuItem from "@mui/material/MenuItem";
-import storeLogo from "../../../assets/fashion-store-logo.jpg"
+import storeLogo from "../../../assets/fashion-store-logo.jpg";
+import { useNavigate } from "react-router-dom";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -35,6 +36,7 @@ export default function Navbar() {
   const [openAuthModal, setOpenAuthModal] = useState(false);
   const [anchorEl, setAnchorE1] = useState(null);
   const openUserMenu = Boolean(anchorEl);
+  const navigate = useNavigate();
 
   const handleUserClick = (e) => {
     setAnchorE1(e.currentTarget);
@@ -52,8 +54,9 @@ export default function Navbar() {
     setOpenAuthModal(false);
   };
 
-  const handleCategoryClick = (category, section, item, close) => {
-    close();
+  const handleCategoryClick = (category, section, item) => {
+    navigate(`/${category.id}/${section.id}/${item.id}`);
+    // close();
   };
 
   return (
@@ -272,7 +275,7 @@ export default function Navbar() {
               </button>
 
               {/* Logo */}
-              <div className="ml-1  flex lg:ml-0">
+              <div onClick={() => navigate("/")} className="ml-1  flex lg:ml-0">
                 <a href="#">
                   <span className="sr-only">Your Company</span>
                   <img
@@ -364,12 +367,18 @@ export default function Navbar() {
                                               key={item.name}
                                               className="flex"
                                             >
-                                              <a
-                                                href={item.href}
-                                                className="hover:text-gray-800"
+                                              <p
+                                                onClick={() =>
+                                                  handleCategoryClick(
+                                                    category,
+                                                    section,
+                                                    item
+                                                  )
+                                                }
+                                                className="cursor-pointer hover:text-gray-800"
                                               >
                                                 {item.name}
-                                              </a>
+                                              </p>
                                             </li>
                                           ))}
                                         </ul>
@@ -399,7 +408,7 @@ export default function Navbar() {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  {false ? (
+                  {true ? (
                     <div>
                       <Avatar
                         className="text-white"
@@ -426,7 +435,9 @@ export default function Navbar() {
                         <MenuItem onClick={handleCloseUserMenu}>
                           Profile
                         </MenuItem>
-                        <MenuItem>My Orders</MenuItem>
+                        <MenuItem onClick={() => navigate("/account/order")}>
+                          My Orders
+                        </MenuItem>
                         <MenuItem>Logout</MenuItem>
                       </Menu>
                     </div>
