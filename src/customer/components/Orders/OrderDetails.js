@@ -7,9 +7,9 @@ import { StarBorder } from "@mui/icons-material";
 
 export default function OrderDetails() {
   return (
-    <div className="px-5 lg:px-16 mt-5 md:mt-10">
+    <div className="px-5 pb-10 bg-[#f2f2f2] lg:px-16 pt-5 md:pt-10">
       {/* 1 */}
-      <div className="px-5 py-3  shadow-md border">
+      <div className="px-5 py-3 bg-white  shadow-md border">
         <h1 className="font-bold text-lg pb-5 md:pb-7 ">Delivery Address</h1>
         <AddressCard />
       </div>
@@ -25,7 +25,7 @@ export default function OrderDetails() {
           <Grid
             item
             container
-            className="shadow-md hover:shadow-lg rounded-md p-5 border"
+            className="shadow-md hover:shadow-lg bg-white rounded-md p-5 border"
             sx={{ alignItems: "center", justifyContent: "space-between" }}
             gap={{ xs: 3, md: 0 }}
           >

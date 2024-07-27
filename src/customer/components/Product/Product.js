@@ -147,7 +147,7 @@ export default function Product() {
   };
 
   return (
-    <div className="bg-white">
+    <div className="bg-[#f2f2f2]">
       <div>
         {/* Mobile filter dialog */}
         <Dialog
@@ -163,13 +163,13 @@ export default function Product() {
           <div className="fixed inset-0 z-40 flex">
             <DialogPanel
               transition
-              className="relative ml-auto flex h-full w-full max-w-xs transform flex-col overflow-y-auto bg-white py-4 pb-12 shadow-xl transition duration-300 ease-in-out data-[closed]:translate-x-full"
+              className="relative ml-auto flex h-full w-full max-w-xs transform flex-col overflow-y-auto bg-[#f2f2f2] py-4 pb-12 shadow-xl transition duration-300 ease-in-out data-[closed]:translate-x-full"
             >
               <div className="flex items-center justify-between px-4">
                 <h2 className="text-lg font-medium text-gray-900">Filters</h2>
                 <button
                   type="button"
-                  className="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-white p-2 text-gray-400"
+                  className="-mr-2 flex h-10 w-10 items-center justify-center rounded-md bg-[#f2f2f2] p-2 text-gray-400"
                   onClick={() => setMobileFiltersOpen(false)}
                 >
                   <span className="sr-only">Close menu</span>
@@ -189,7 +189,7 @@ export default function Product() {
                       {({ open }) => (
                         <>
                           <h3 className="-mx-2 -my-3 flow-root">
-                            <DisclosureButton className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
+                            <DisclosureButton className="flex w-full items-center justify-between bg-[#f2f2f2] px-2 py-3 text-gray-400 hover:text-gray-500">
                               <span className="font-medium text-gray-900">
                                 {section.name}
                               </span>
@@ -249,7 +249,7 @@ export default function Product() {
                       {({ open }) => (
                         <>
                           <h3 className="-mx-2 -my-3 flow-root">
-                            <DisclosureButton className="flex w-full items-center justify-between bg-white px-2 py-3 text-gray-400 hover:text-gray-500">
+                            <DisclosureButton className="flex w-full items-center justify-between bg-[#f2f2f2] px-2 py-3 text-gray-400 hover:text-gray-500">
                               <span className="font-medium text-gray-900">
                                 {section.name}
                               </span>
@@ -314,7 +314,7 @@ export default function Product() {
 
                 <MenuItems
                   transition
-                  className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
+                  className="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-[#f2f2f2] shadow-2xl ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
                 >
                   <div className="py-1">
                     {sortOptions.map((option) => (
@@ -388,7 +388,7 @@ export default function Product() {
                       {({ open }) => (
                         <>
                           <h3 className="-my-3 flow-root">
-                            <DisclosureButton className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                            <DisclosureButton className="flex w-full items-center justify-between bg-[#f2f2f2] py-3 text-sm text-gray-400 hover:text-gray-500">
                               <span className="font-medium text-gray-900">
                                 {section.name}
                               </span>
@@ -448,7 +448,7 @@ export default function Product() {
                       {({ open }) => (
                         <>
                           <h3 className="-my-3 flow-root">
-                            <DisclosureButton className="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500">
+                            <DisclosureButton className="flex w-full items-center justify-between bg-[#f2f2f2] py-3 text-sm text-gray-400 hover:text-gray-500">
                               <span className="font-medium text-gray-900">
                                 {section.name}
                               </span>
@@ -501,7 +501,7 @@ export default function Product() {
 
               {/* Product grid */}
               <div className="lg:col-span-3 w-full">
-                <div className="flex flex-wrap justify-center bg-white py-5">
+                <div className="flex flex-wrap justify-center bg-[#f2f2f2] py-5">
                   {mens_kurta.map((item) => (
                     <ProductCard product={item} />
                   ))}

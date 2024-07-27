@@ -18,15 +18,7 @@ function App() {
         <Route path="/*" element={<CustomerRoutes />} />
       </Routes>
 
-      {/* <div className="flex-1 min-h-screen mb-0"> */}
-        {/* <Home/> */}
-        {/* <Product/> */}
-        {/* <ProductDetail /> */}
-        {/* <Cart /> */}
-        {/* <Checkout /> */}
-        {/* <Orders /> */}
-        {/* <OrderDetails /> */}
-      {/* </div> */}
+     
     </>
   );
 }

@@ -11,7 +11,7 @@ const orderStatus = [
 
 export default function Orders() {
   return (
-    <div className="mt-5 md:mt-10 px-3 lg:px-16">
+    <div className="py-5 bg-[#f2f2f2] md:py-10 px-3 lg:px-16">
       <Grid
         container
         gap={{ xs: 4, md: 0 }}
@@ -46,7 +46,7 @@ export default function Orders() {
 
         {/* Order History */}
         <Grid item xs={12} md={9}>
-          <div className="space-y-8">
+          <div className="space-y-5">
             {[1, 1, 1, 1, 1].map((item) => (
               <OrderCard />
             ))}

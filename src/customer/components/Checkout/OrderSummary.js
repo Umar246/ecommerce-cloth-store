@@ -6,7 +6,7 @@ export default function OrderSummary() {
   return (
     <div className="mt-[2rem] lg:mt-[3.5rem]">
       {/* Address */}
-      <div className="p-5 shadow-md  rounded-s-md border">
+      <div className="p-5 bg-white shadow-md  rounded-s-md border">
         <AddressCard />
       </div>
 
@@ -19,8 +19,8 @@ export default function OrderSummary() {
             ))}
           </div>
 
-          <div className="sticky top-0 h-[100vh] mt-5 lg:mt-0">
-            <div className="border shadow-md p-5">
+          <div className="sticky top-5 h-[100vh] mt-5 lg:mt-0">
+            <div className="border bg-white shadow-md p-5">
               <p className="uppercase font-bold opacity-60 pb-4">
                 Price details
               </p>
@@ -51,11 +51,10 @@ export default function OrderSummary() {
 
               <Button
                 variant="contained"
-                className="w-full"
+                className="w-full styledButton"
                 sx={{
                   px: "1.2rem",
                   py: "0.5rem",
-                  bgcolor: "#9155fd",
                   mt: "2rem",
                 }}
               >

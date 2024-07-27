@@ -8,7 +8,7 @@ export default function Footer() {
       <div>
         <Grid
           container
-          className="bg-gray-800 mb-0 text-white text-center mt-10 space-y-6 md:space-y-0"
+          className="bg-[#0a1535] mb-0 text-white text-center  space-y-6 md:space-y-0"
           sx={{ color: "white", py: 3 }}
         >
           {/* 1 */}

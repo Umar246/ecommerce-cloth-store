@@ -4,7 +4,7 @@ import React from "react";
 
 export default function CartItem() {
   return (
-    <div className="p-5 shadow-md border rounded-md space-y-4">
+    <div className="p-5 bg-white shadow-md border rounded-md space-y-4">
       {/* //TODO: Image and details */}
       <div className="flex items-center">
         <div className="w-[7rem] h-[7rem] lg:w-[9rem] lg:h-[9rem]">

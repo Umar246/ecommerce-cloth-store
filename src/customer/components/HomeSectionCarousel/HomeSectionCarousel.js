@@ -63,7 +63,7 @@ export default function HomeSectionCarousel({ productsData, sectionName }) {
           {!(activeIndex === items.length - 1) && (
             <Button
               variant="contained"
-              className="z-50"
+              className="z-50 "
               onClick={slideNext}
               sx={{
                 position: "absolute",
@@ -71,6 +71,9 @@ export default function HomeSectionCarousel({ productsData, sectionName }) {
                 right: "0rem",
                 transform: "translateX(50%) rotate(90deg)",
                 bgcolor: "white",
+                "&:hover": {
+                  bgcolor: "#f2f2f2",
+                },
               }}
               aria-label="next"
               // disabled={activeIndex === items.length - 1}
@@ -92,6 +95,9 @@ export default function HomeSectionCarousel({ productsData, sectionName }) {
                 left: "0rem",
                 transform: "translateX(-50%) rotate(90deg)",
                 bgcolor: "white",
+                "&:hover": {
+                  bgcolor: "#f2f2f2",
+                },
               }}
               aria-label="previous"
               disabled={activeIndex === 0}

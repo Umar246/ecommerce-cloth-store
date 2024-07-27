@@ -7,7 +7,7 @@ export default function ProductCard({ product }) {
   return (
     <div
       onClick={() => navigate(`/product/${5}`)}
-      className="productCard w-[15rem] m-3 transition-all cursor-pointer"
+      className="productCard  w-[15rem] m-3 transition-all cursor-pointer"
     >
       <div className="h-[17rem]">
         <img

@@ -34,7 +34,7 @@ export default function Checkout() {
 
   return (
     <>
-      <div className="mt-10 px-3 md:px-10 lg:px-16">
+      <div className="py-10 px-3 md:px-10 lg:px-16 bg-[#f2f2f2]">
         {/* //TODO: MUI Steppe Code */}
         <Box sx={{ width: "100%" }}>
           <Stepper

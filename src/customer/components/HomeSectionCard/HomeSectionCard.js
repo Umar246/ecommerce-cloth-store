@@ -3,7 +3,7 @@ import React from "react";
 export default function HomeSectionCard({ product }) {
   // console.log("product in here ", product);
   return (
-    <div className="cursor-pointer  flex flex-col items-center bg-white rounded-lg shadow-sm md:shadow-md overflow-hidden w-[15rem]  mx-auto mb-2 ">
+    <div className="cursor-pointer pt-5  flex flex-col items-center bg-white rounded-lg shadow-sm md:shadow-md overflow-hidden w-[15rem]  mx-auto mb-2 ">
       {/* Img */}
       <div className="h-[13rem] w-[10rem] ">
         <img

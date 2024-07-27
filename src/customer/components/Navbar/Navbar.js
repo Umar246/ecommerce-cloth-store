@@ -56,11 +56,11 @@ export default function Navbar() {
 
   const handleCategoryClick = (category, section, item) => {
     navigate(`/${category.id}/${section.id}/${item.id}`);
-    // close();
+    setOpen(false);
   };
 
   return (
-    <div className="bg-white relative z-50">
+    <div className="bg-[#f2f2f2] relative z-50">
       {/* Mobile menu */}
       <Dialog className="relative z-40 lg:hidden" open={open} onClose={setOpen}>
         <DialogBackdrop
@@ -71,7 +71,7 @@ export default function Navbar() {
         <div className="fixed inset-0 z-40 flex">
           <DialogPanel
             transition
-            className="relative flex w-full max-w-xs transform flex-col overflow-y-auto bg-white pb-12 shadow-xl transition duration-300 ease-in-out data-[closed]:-translate-x-full"
+            className="relative flex w-full max-w-xs transform flex-col overflow-y-auto bg-[#f2f2f2] pb-12 shadow-xl transition duration-300 ease-in-out data-[closed]:-translate-x-full"
           >
             <div className="flex px-4 pb-2 pt-5">
               <button
@@ -253,7 +253,7 @@ export default function Navbar() {
       </Dialog>
 
       {/* Large Screen */}
-      <header className="relative bg-white">
+      <header className="relative bg-[#f2f2f2]">
         {/* <p className="flex h-10 items-center justify-center bg-indigo-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
           Get free delivery on orders over $100
         </p> */}
@@ -266,7 +266,7 @@ export default function Navbar() {
             <div className="flex h-16 items-center">
               <button
                 type="button"
-                className="relative rounded-md bg-white p-2 text-gray-400 lg:hidden"
+                className="relative rounded-md bg-[#f2f2f2] p-2 text-gray-400 lg:hidden"
                 onClick={() => setOpen(true)}
               >
                 <span className="absolute -inset-0.5" />
@@ -312,11 +312,11 @@ export default function Navbar() {
                           >
                             {/* Presentational element used to render the bottom shadow, if we put the shadow on the actual panel it pokes out the top, so we use this shorter element to hide the top of the shadow */}
                             <div
-                              className="absolute inset-0 top-1/2 bg-white shadow"
+                              className="absolute inset-0 top-1/2 bg-[#f2f2f2] shadow"
                               aria-hidden="true"
                             />
 
-                            <div className="relative bg-white">
+                            <div className="relative bg-[#f2f2f2]">
                               <div className="mx-auto max-w-7xl px-8">
                                 <div className="grid grid-cols-2 gap-x-8 gap-y-10 py-16">
                                   <div className="col-start-2 grid grid-cols-2 gap-x-8">

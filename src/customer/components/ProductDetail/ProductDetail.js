@@ -71,7 +71,7 @@ export default function ProductDetail() {
 };
 
   return (
-    <div className="bg-white lg:px-20">
+    <div className="bg-[#f2f2f2] pb-10 lg:px-20">
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
           <ol
@@ -233,11 +233,12 @@ export default function ProductDetail() {
 
                 <Button
                   onClick={handleAddToCart}
+                  className="styledButton"
                   variant="contained"
                   sx={{
                     px: "1.2rem",
                     py: "0.5rem",
-                    bgcolor: "#9155fd",
+                    // bgcolor: "#9155fd",
                     mt: "2rem",
                   }}
                 >
@@ -391,7 +392,7 @@ export default function ProductDetail() {
             Similar Products
           </h1>
 
-          <div className="flex flex-wrap space-y-8 ">
+          <div className="flex flex-wrap gap-5 lg:gap-10">
             {mens_kurta.slice(0, 12).map((item) => (
               <HomeSectionCard product={item} />
             ))}

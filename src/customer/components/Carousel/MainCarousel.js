@@ -7,7 +7,7 @@ export default function MainCarousel() {
  
     const items = MainCarouselData.map((item) => (
     <img
-      className="cursor-pointer h-[30vh] md:h-full"
+      className="cursor-pointer bg-[#f2f2f2] h-[30vh] md:h-full"
       src={item.image}
       alt="Carousel_Image"
       role="presentation"
@@ -15,12 +15,15 @@ export default function MainCarousel() {
   ));
 
   return (
-    <AliceCarousel
-      items={items}
-      disableButtonsControls
-      autoPlay
-      autoPlayInterval={2000}
-      infinite
-    />
+    <div className="bg-[#f2f2f2]">
+
+      <AliceCarousel
+        items={items}
+        disableButtonsControls
+        autoPlay
+        autoPlayInterval={2000}
+        infinite
+      />
+    </div>
   );
 }

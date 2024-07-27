@@ -8,7 +8,7 @@ export default function OrderCard() {
   return (
     <div
       onClick={() => navigate(`/account/order/${5}`)}
-      className="p-5 shadow-md hover:shadow-lg"
+      className="p-5 shadow-md bg-white hover:shadow-lg"
     >
       <Grid
         container
